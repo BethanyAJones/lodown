@@ -22,3 +22,27 @@ function each(collection, action) {
     }
 }
 module.exports.each = each;
+
+
+/**
+ * identity: function takes in any values and returns that value unchanged
+ * 
+ * @param {any datatype}: function takes in a single parameter of any datatype
+ * @return {any datatype}: function returns in a single parameter of any datatype 
+ */
+function identity (value){
+    return value;
+}
+
+module.exports.identity = identity;
+
+
+
+// **How to push Lodown Changes**
+// -in terminal type >> cd ..
+// -in terminal type >> cd lodown
+// needs to be saved in the lodown repo
+// cd .. 
+// git add -A
+// git commit -m "XYZ"
+// git push
