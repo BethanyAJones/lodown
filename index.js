@@ -192,14 +192,23 @@ module.exports.unique = unique;
  * @return {Array} newArr: The output array comprised of the values returned from
  * the input function that returned true.
  */
-function filter(array, func){
+ _.filter = function(array, func){ // takes in 2 args: array and func function
     let newArr = [];
-    for (let i = 0; i < array.length; i++){
-        let results = func(array[i], i, array);
+    if(Array.isArray(array)){
+    for (let i = 0; i < array.length; i++){//for each element in array, for loop
+        let results = func(array[i], i, array);//call a function on each element in array, pass 3 args
         if(results){
             newArr.push(array[i]);
         }
-    }
+        }
+    } else {
+        for (let i in array){
+            let results = func(array[i], i, array);
+            if(results){
+                newArr.push(array[i]);
+                }
+            }
+        }
     return newArr;
 }
 module.exports.filter = filter;
