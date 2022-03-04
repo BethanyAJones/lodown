@@ -68,7 +68,7 @@ module.exports.typeOf = typeOf;
 
 /**
  * first: Function takes in an input Array and a Number and 
- * returns the first element of input Array that passes a given condition.  
+ * returns the first x number of elements of input Array as determined by the input Number.  
  * 
  * @param {Array} array: an input Array from which a portion or a value is returned 
  * @param {Number} number: a Number indicating the number of elements to return 
@@ -91,10 +91,17 @@ function first(array, number){
 }
 module.exports.first = first;
 
+    //FEEDBACK: This is included in your description of the first function...
+    // 'returns the first element of input Array that passes a given condition.'  
+    // The way that this is phrased implies that a tester function is passed into first.
+    // The items in the array don't have to pass a condition so to speak, the function just needs to the x number of first elements.
+    // That is true in a sense, but your description implies that I'm searching for the "first 
+    // element in an array that satisfies a given condition", which is not what first does.
+    // first([1, 2, 3], 2) => [1, 2]
+    //It just returns the "first" number of elements in an array as identified by the parameter
 
 /**
- * last: function takes in an Array and a Number and returns the last element of the input 
- * Array that passes a given condition.
+ * last: Function takes in an Array and a Number and returns the last x number of elements of input Array as determined by the input Number.
  * 
  * @param {Array} array: an Array from which a portion or a value is returned. 
  * @param {Number} number: a Number indicating the number of elements to return from
@@ -123,7 +130,7 @@ function last(array, number){
 module.exports.last = last;
 
 /**
- * indexOf: Function takes in an Array and a value and evaluates the index of the first occurrance 
+ * indexOf: Function takes in an Array and a value and returns the index of the first occurrance 
  * of the input value.
  * 
  * @param {Array} array: The input collection over which to iterate.
