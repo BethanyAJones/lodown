@@ -91,17 +91,9 @@ function first(array, number){
 }
 module.exports.first = first;
 
-    //FEEDBACK: This is included in your description of the first function...
-    // 'returns the first element of input Array that passes a given condition.'  
-    // The way that this is phrased implies that a tester function is passed into first.
-    // The items in the array don't have to pass a condition so to speak, the function just needs to the x number of first elements.
-    // That is true in a sense, but your description implies that I'm searching for the "first 
-    // element in an array that satisfies a given condition", which is not what first does.
-    // first([1, 2, 3], 2) => [1, 2]
-    //It just returns the "first" number of elements in an array as identified by the parameter
-
 /**
- * last: Function takes in an Array and a Number and returns the last x number of elements of input Array as determined by the input Number.
+ * last: Function takes in an Array and a Number and returns the last x number of elements 
+ * of input Array as determined by the input Number.
  * 
  * @param {Array} array: an Array from which a portion or a value is returned. 
  * @param {Number} number: a Number indicating the number of elements to return from
@@ -274,8 +266,8 @@ module.exports.partition = partition;
 
 /**
  * map: Function takes in a Collection and a Function and calls the input Function on each 
- * element in the collection. Depending on whether the Collection is an Array or an 
- * Object, a new array containing the value or element is returned. 
+ * element in the collection. The output array is populated with the result of the input 
+ * Function being called on the current value in the Collection. 
  * 
  * @param {Array or Object} collection: The input collection over which to iterate.
  * @param {Function} func: The input function to call on each element in the input collection.
@@ -315,8 +307,8 @@ module.exports.pluck = pluck;
 
 /**
  * every: Function takes in an input Collection and a Function and is designed to return 
- * a Boolean False if even one element in the input Collection is falsy. Otherwise, if 
- * all elements are truthy, it returns a Boolean True.
+ * true if every element returns true when passed into the input Function. If no input Function 
+ * is provided, the function will return true if every element is truthy. 
  * 
  * @param {Array or Object} collection: The input collection through which to iterate.
  * @param {Function} func: The input function that evalutes whether the elements in the 
@@ -396,10 +388,10 @@ module.exports.some = some;
  * @param {Array} array: An input Array through which to iterate and call the input Function.
  * @param {Function} func: An input Function to call on every element in the array and perform
  * an action that reduces the array elements into a single value.
- * @param {Number} seed: An input Number providing a starting value for the input Function's 
+ * @param {any datatype} seed: An input value providing a starting value for the input Function's 
  * 'previous' parameter. If no seed is provided, the seed is assigned the value of the first
  * element in the input Array. 
- * @return {Number} previous: A single Number representing the end result of calling the input
+ * @return {any datatype} previous: A single value representing the end result of calling the input
  * Function on each element of the input Array. 
  */
 function reduce(array, func, seed){
